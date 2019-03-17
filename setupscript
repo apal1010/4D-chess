@@ -1,0 +1,16 @@
+#!/bin/bash
+cd dist/4dchess.app/Contents/MacOs
+mkdir tcl tk
+cp -R /Library/Frameworks/Python.framework/Versions/3.6/lib/tcl* tcl/
+cp -R /Library/Frameworks/Python.framework/Versions/3.6/lib/tk* tk/
+cp -R /Library/Frameworks/Python.framework/Versions/3.6/lib/Tk* tk/ 
+ditto /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/vpython vpython
+cd vpython/vpython_libraries
+for file in *.html
+do
+  mv "$file" "${file%.html}.htmlc"
+done
+cd ..
+mkdir vpython_librariesc vpython_datac
+cp -r vpython_libraries/ vpython_librariesc
+cp -r vpython_data/ vpython_datac

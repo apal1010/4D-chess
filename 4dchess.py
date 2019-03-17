@@ -1,0 +1,2 @@
+import chessboard
+chessboard.rungame()
