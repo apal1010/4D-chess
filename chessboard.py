@@ -10,7 +10,7 @@ from random import shuffle
 scene.width = 900
 scene.height = 450
 class Board:
-    'Class for chess board and pieces'
+
     def __init__(self):
         scene.title = 'loading'
         scene.center=vector(1.5,5,9)
