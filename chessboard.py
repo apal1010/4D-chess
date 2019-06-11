@@ -1,4 +1,5 @@
 from vpython import *
+#made using vpython, download instructions at vpython.org
 import piece
 from numpy import empty
 import fvector as fvec
