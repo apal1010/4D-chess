@@ -1,0 +1,6 @@
+Rightclick+drag to rotate
+Shift+click and drag to pan
+
+Click a piece to select it, click a green spot or the piece on that spot to move it there.
+
+If you activate an AI while it is it's turn, click anywhere to get it started
