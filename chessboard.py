@@ -7,6 +7,7 @@ from move import Move
 import node
 from copy import copy
 from random import shuffle
+from itertools import product
 
 scene.width = 900
 scene.height = 450
@@ -263,15 +264,12 @@ class Board:
             return False
 
     def makeBoard(self):
-        for d in range(4):
-            for k in range(4):
-                for i in range(4):
-                    for j in range(4):
-                        if (i+j+k+d) % 2 == 1:
-                            sColor = color.blue
-                        else: 
-                            sColor = color.white
-                        box(pos=vector(i,(k*2.5),j+(5*d)),length=1,height=0.1,width=1,color=sColor)
+        for d, k, i, j in product(range(4), repeat=4):
+            if (i+j+k+d) % 2 == 1:
+                sColor = color.blue
+            else: 
+                sColor = color.white
+            box(pos=vector(i,(k*2.5),j+(5*d)),length=1,height=0.1,width=1,color=sColor)
 
     def spawnPiece(self, piecetype, team, x,y,z,d):
         col = color.white
