@@ -1,6 +1,7 @@
 from vpython import*
 import piece
 import copy
+
 def legal(x):
     if(x<0):
         return False
