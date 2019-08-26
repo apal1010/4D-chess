@@ -1,5 +1,5 @@
 from vpython import *
-#made using vpython, download instructions at vpython.org
+#made using vpython, download instructions at vpython.org, check is out
 import piece
 from numpy import empty
 import fvector as fvec
